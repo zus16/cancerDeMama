@@ -4,6 +4,7 @@ const exconn = require('express-myconnection')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
 const cors = require('cors')
+const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const app = express()
 

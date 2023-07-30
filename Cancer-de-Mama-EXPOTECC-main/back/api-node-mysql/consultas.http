@@ -29,7 +29,7 @@ POST http://localhost:9000/api/addcalendar HTTP/1.1
     }
 ###
 
-    DELETE http://localhost:9000/api/prueba2@gmail.com HTTP/1.1
+    DELETE http://localhost:9000/api/probando@gmail.com HTTP/1.1
 
 ###
 

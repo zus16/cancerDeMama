@@ -1,5 +1,10 @@
 const express = require('express')
 const routes = express.Router()
+const jwt = require('jsonwebtoken')
+
+require('dotenv').config();
+const SECRET_KEY = process.env.SECRET_KEY;
+
 
 // RUTA PARA EL LOGIN
 routes.post('/login', (req, res) => {
@@ -12,7 +17,7 @@ routes.post('/login', (req, res) => {
           if (err) return console.log(err);
     
           if (rows.length === 0) {
-            // No se encontró ningún usuario con la dirección de correo electrónico proporcionada
+            // No se encontró ningún usuario con la dirección de correo electrónico insertada
             return res.status(404).json({ message: 'Usuario no encontrado' });
           }
     
@@ -21,57 +26,124 @@ routes.post('/login', (req, res) => {
           if (user.contrasenna !== contrasenna) {
             // La contraseña no coincide
             return res.status(401).json({ message: 'Contraseña incorrecta' });
-          }
-    
-          // Inicio de sesión exitoso
-          return res.status(200).json({ message: 'Inicio de sesión exitoso', user });
-        })
 
+            } else {
+              // Inicio de sesión exitoso
+              const token = jwt.sign({ correo_electronico: user.correo_electronico, contrasenna: user.contrasenna }, SECRET_KEY);
+              console.log('inicio de sesion exitoso')   
+              console.log(token)      
+   
+              // Enviar el token JWT al frontend como respuesta
+              return res.status(200).json({ message: 'Inicio de sesion exitoso' });
+            }
+        
+        });
     })
-
-  });
+});
 
     // RUTA PARA INSERTAR DATOS EN LA TABLA USUARIO SIGNUP
-routes.post('/signup', (req, res)=>(
-    req.getConnection((err,conn)=>{
-    if(err) return console.log(err)
-
-    conn.query('INSERT INTO usuario set ?', [req.body], (err, rows)=>{
-        if(err) return console.log(err)
-
-        res.send('usuario registrado!')
-    })
-    })
-))
-
-  /*const { correo_electronico, contrasenna } = req.body;
-  (
-      'SELECT * FROM usuario WHERE correo_electronico = ?',
-      [correo_electronico],
-      (error, results) => {
-        if (error) {
-          console.log('Error al realizar la consulta: ', error);
-        } else {
-          if (results.length === 0) {
-          } else {
-            // Compara la contraseña ingresada con la almacenada en la base de datos
-            const usuario = results[0];
-            bcrypt.compare(contrasenna, usuario.contrasenna, (err, match) => {
-              if (err) {
-                console.error('Error al comparar contraseñas: ', err);
-              } else {
-                if (match) {
-                  // Las contraseñas coinciden, inicio de sesión exitoso
-                  res.json({ message: 'Inicio de sesión exitoso' });
-                } else {
-                    console.log("error contrasenna")
-                }
-              }
-            });
-          }
+    routes.post('/registro', (req, res) => {
+    req.getConnection((err, conn) => {
+      if (err) return console.log(err);
+  
+      const { nombre, apellidos, correo_electronico, fecha_nacimiento, contrasenna } = req.body;
+  
+      conn.query('SELECT * FROM usuario WHERE correo_electronico = ?', [correo_electronico], (err, rows) => {
+        if (err) {
+          console.log(err);
+          return res.status(500).json({ message: 'Error del servidor' });
         }
-      }
-    );*/
+  
+        if (rows.length > 0) {
+          // Ya existe un usuario con el mismo correo electrónico
+          return res.status(409).json({ message: 'El correo electrónico ya está registrado' });
+        }
+  
+        const query = 'INSERT INTO usuario (nombre, apellidos, correo_electronico, fecha_nacimiento, contrasenna) VALUES (?, ?, ?, ?, ?)';
+        conn.query(query, [nombre, apellidos, correo_electronico, fecha_nacimiento, contrasenna], (err, result) => {
+          if (err) {
+            console.log(err);
+            return res.status(500).json({ message: 'Error al registrar el usuario' });
+          } else {
+            console.log('Usuario registrado:', result);
+            return res.status(200).json({ message: 'Usuario registrado' });
+          }
+        });
+      });
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
