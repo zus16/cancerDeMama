@@ -1,0 +1,7 @@
+.div-father{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5bfe0;
+    height: 100vh;
+}

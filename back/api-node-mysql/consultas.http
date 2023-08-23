@@ -1,5 +1,9 @@
 ###
+<<<<<<< HEAD
     GET http://localhost:9000/api/InfoUsuario/prueba@gmail.com: HTTP/1.1
+=======
+    GET http://localhost:9000/api HTTP/1.1
+>>>>>>> 2a8f2e79f4a2d7a6336ce851622a288ca026d592
 
 ###
 
@@ -7,11 +11,19 @@
 
 ###
 
+<<<<<<< HEAD
     POST http://localhost:9000/api/signup HTTP/1.1
     Content-Type: application/json
 
     {
         "correo_electronico": "prueba5@gmail.com",
+=======
+    POST http://localhost:9000/api HTTP/1.1
+    Content-Type: application/json
+
+    {
+        "correo_electronico": "prueba@gmail.com",
+>>>>>>> 2a8f2e79f4a2d7a6336ce851622a288ca026d592
         "nombre": " chispita",
         "apellidos": "ss",
         "fecha_nacimiento": "2000-04-24",
@@ -29,9 +41,13 @@ POST http://localhost:9000/api/addcalendar HTTP/1.1
     }
 ###
 
+<<<<<<< HEAD
     DELETE http://localhost:9000/api/probando@gmail.com HTTP/1.1
 
 
+=======
+    DELETE http://localhost:9000/api/prueba@gmail.com HTTP/1.1
+>>>>>>> 2a8f2e79f4a2d7a6336ce851622a288ca026d592
 
 ###
 
