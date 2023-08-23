@@ -1,0 +1,59 @@
+.div_father-autoexamenAvisos{
+    width: 100%;
+    position: absolute;
+    height: 94vh;
+}
+
+.div_son1-autoexamenAvisos{
+    width: 309px;
+    height: 512px;
+    background-color: white;
+    border-radius: 17px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.div_son1-autoexamenAvisos h1{
+    width: 272px;
+    height: 56px;
+    color: #5D3620;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 112%; /* 24.64px */
+}
+
+.div_son1-autoexamenAvisos p{
+    width: 248px;
+    height: 131px;
+    color: #3F2212;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 17.5px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 112%;
+
+}
+
+.div_son1-autoexamenAvisos svg{
+width: 49.5px;
+height: 14.5px;
+}
+
+.btn_siguiente-autoexamenAvisos{
+width: 118px;
+height: 29px;
+border-radius: 10px;
+background-color: #FF828D;
+border: none;
+}

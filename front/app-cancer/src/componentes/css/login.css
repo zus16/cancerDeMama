@@ -1,0 +1,100 @@
+.div-father-LOGIN{
+    display: flex;
+    width: 100%;
+    height: 90vh;
+}
+
+.backgorund-img-logo{
+    width: 60%;
+    height: 849px;
+    background-image: url('../../imagenes/fondo1.png');
+}
+
+.backgorund-img-logo h1{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    display: flex; /* Add this to make the child elements center */
+    align-items: center; /* Center vertically */
+    justify-content: center;
+}
+
+.info-login{
+    width: 40%;
+    height: 849px;
+    background-color: white;
+}
+
+.info-login h2{
+    font-size: 45px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.input-contenedor1{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    height: 100px;
+}
+
+.input-contenedor{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    height: 100px;
+    margin-bottom: 115px;
+
+}
+
+.input-dato{
+    width: 60%;
+    height: 50px;
+    background-color: #EED4EA;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.div-btn-iniciar-sesion{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    height: 100px;
+    margin-bottom: 100px;
+}
+
+.btn-iniciar-sesion{
+    width: 30%;
+    height: 50px;
+    background-color: #FF8893;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.div-btn-link-signup{
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    height: 100px;
+}
+
+.btn-link-signup{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+.btn-link-signup:hover{
+    color: #ff5d94;
+}

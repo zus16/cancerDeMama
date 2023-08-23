@@ -1,0 +1,199 @@
+body{
+    background-color: #eed4ea;
+}
+
+.autoexamenP-div{
+    width: 100%;
+    height: 90vh;
+}
+
+section{
+    display: block;
+}
+
+.container-forms-autoexamen{
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    background-color: #fff;
+}
+
+.px-5{
+    padding-right: 3rem!important;
+    padding-left: 3rem!important;
+}
+
+.div-video-autoexamen{
+    width: 100%;
+    height: 90vh;
+}
+
+.imagenes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.titulos-divs{
+    text-align: center;
+}
+
+.div-questions-autoexamen{
+    margin-left: 50px;
+    width: 100%;
+    height: 90vh;
+}
+
+.div-questions-autoexamen h3{
+    text-align: center;
+    margin: 15px;
+}
+
+.option-questions-form-autoexamen{
+    width: 100%;
+    height: 83vh;
+    background-color: green;
+    display: block;
+}
+
+.option-quiestion-one{
+    width: 100%;
+    height: 50px;
+}
+
+.option-quiestion-two{
+    width: 100%;
+    height: 50px;
+}
+
+.option-quiestion-three{
+    width: 100%;
+    height: 50px;
+}
+
+.respuesta-imagenes{
+    width: 100%;
+    height: 90vh;
+}
+
+.respuesta-imagenes-div{
+    margin: auto;
+    width: 90%;
+    height: 90vh;
+}
+
+.calendario-section{
+    width: 100%;
+    height: 90vh;
+}
+
+.calendario-autoexamen{
+    height: 80vh;
+    margin: 9px 94px;
+    display: block;
+}
+
+.calendar{
+    height: 80vh;
+    min-width: 375px;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    padding: 2px 23px;
+    min-height: auto;
+}
+
+/* Estilos para el componente de la agenda */
+.agenda-calendar {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 80vh;
+  }
+  
+  .selected-date {
+    margin-top: 10px;
+  }
+  
+  /* Personalización del calendario */
+  .react-calendar {
+    max-width: 100%;
+    background: #f7f7f7;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para el encabezado del calendario (nombres de los días y navegación) */
+  .react-calendar__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .react-calendar__navigation button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2.2rem;
+    padding: 5px 10px;
+  }
+  
+  /* Estilos para los días de la semana */
+  .react-calendar__month-view__weekdays {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .react-calendar__month-view__weekdays__weekday {
+    width: calc(100% / 7);
+    text-align: center;
+  }
+
+  .react-calendar__month-view__weekdays__weekday abbr{
+    text-decoration: none;
+  }
+  
+  /* Estilos para los números de los días */
+  .react-calendar__tile {
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    position: relative;
+    height: 110px;
+  }
+  
+  .react-calendar__tile abbr[aria-label] {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .react-calendar__tile--active {
+    background: #e0e0e0;
+    color: #333;
+  }
+  
+  /* Estilos para mostrar eventos en las fechas */
+  .event {
+    margin: 5px 0;
+    padding: 5px;
+    background: #4caf50;
+    color: #fff;
+  }
+
+
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-image {
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+  }

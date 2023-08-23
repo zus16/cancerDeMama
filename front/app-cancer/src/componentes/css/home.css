@@ -1,0 +1,44 @@
+.div-homeP{
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    background-image: url(../../imagenes/fondo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+
+.div-father-home{
+    color: #000;
+    width: 100%;
+    height: 200vh;
+}
+
+
+.div-home-title{
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+}
+
+.div-home-title h1{
+    width: 60vh;
+    height: 20vh;
+    text-align: start;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+
+.son1-home{
+    width: 100%;
+    height: 100vh;
+}
+
+@media (min-width: 480px) {
+    .div-father-home {
+    }
+}
+
